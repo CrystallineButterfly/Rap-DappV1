@@ -1,6 +1,6 @@
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import Head from "next/head";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import styles from "../styles/Home.module.css";
 import b from "../public/b.jpg";
@@ -9,6 +9,11 @@ import alien from "../public/alien.webp";
 
 export default function Home() {
   const ref = useRef();
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  function togglePlay() {
+    setIsPlaying(!isPlaying);
+  }
 
   return (
     <div>
@@ -53,6 +58,11 @@ export default function Home() {
         >
           <h2>K42</h2>
           <ConnectButton />
+          <div></div>
+          <div>
+            <button onClick={togglePlay}>{isPlaying ? "Pause" : "Play"}</button>
+            <audio src="../public/alive.mp3" autoPlay={isPlaying} />
+          </div>
         </ParallaxLayer>
       </Parallax>
     </div>
