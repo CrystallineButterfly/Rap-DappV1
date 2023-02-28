@@ -17,6 +17,7 @@ export default function Home() {
 
   return (
     <div>
+      <ConnectButton />
       <Parallax pages={4} ref={ref}>
         <ParallaxLayer
           offset={0}
@@ -56,13 +57,11 @@ export default function Home() {
           speed={2}
           onClick={() => ref.current.scrollTo(0)}
         >
-          <h2>K42</h2>
-          <ConnectButton />
-          <div></div>
           <div>
             <button onClick={togglePlay}>{isPlaying ? "Pause" : "Play"}</button>
             <audio src="../public/alive.mp3" autoPlay={isPlaying} />
           </div>
+          <h2>Waves</h2>
         </ParallaxLayer>
       </Parallax>
     </div>
