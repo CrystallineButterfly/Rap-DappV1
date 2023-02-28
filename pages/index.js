@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import Head from "next/head";
 import { useRef, useState } from "react";
