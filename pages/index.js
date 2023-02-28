@@ -17,7 +17,6 @@ export default function Home() {
 
   return (
     <div>
-      <ConnectButton />
       <Parallax pages={4} ref={ref}>
         <ParallaxLayer
           offset={0}
@@ -28,6 +27,7 @@ export default function Home() {
             backgroundSize: "cover",
           }}
         />
+        <ConnectButton />
 
         <ParallaxLayer
           offset={2}
